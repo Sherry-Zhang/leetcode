@@ -31,7 +31,7 @@ public:
                 ans.append(c[i] - 5, R[0][i]);
             }
             else if (c[i] == 9)
-                ans += R[0][i] + R[0][i + 1];
+                ans = ans + R[0][i] + R[0][i + 1];
         }
         return ans;
     }

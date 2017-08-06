@@ -1,3 +1,4 @@
+//69ms,beats 24%
 #include <iostream>
 #include <string>
 #include <map>
@@ -13,10 +14,9 @@ public:
         int len = s.size();
         int num = 0;    //转换后的数字
         int tmp = m[s[0]];
-        int cmp;
         for (auto &c : s)       //对字符串的每个字符进行遍历
         {
-            cmp = m[c] / tmp;
+            int cmp = m[c] / tmp;
             if (cmp > 1 && cmp <= 10)      //如果相邻字符右边代表的值比左边的大，且不超过1个数量级，就相减
                 num = num - tmp + m[c] - tmp;        //需要多减一次上次循环加上的tmp
             else
